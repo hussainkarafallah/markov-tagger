@@ -18,8 +18,9 @@ Simplifying the model, we consider only the following:
 
 They are are defined as:
 
-$$ P_{transition}(tag_i | tag_{i-1}) = \frac{Count(tag_{i-1},tag_i)}{Count(tag_{i-1})}$$
-$$P_{likelihood}(token_i|tag_i) = \frac{Count(tag_{i},token_i)}{Count(tag_{i})}$$
+$ P_{transition}(tag_i | tag_{i-1}) = \frac{Count(tag_{i-1},tag_i)}{Count(tag_{i-1})}$
+
+$P_{likelihood}(token_i|tag_i) = \frac{Count(tag_{i},token_i)}{Count(tag_{i})}$
 
 
 Because the model is purely statistical, the training process is just computation of probability values which is done in linear time. 
