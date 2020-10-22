@@ -18,9 +18,7 @@ Simplifying the model, we consider only the following:
 
 They are are defined as:
 
-$ P_{transition}(tag_i | tag_{i-1}) = \frac{Count(tag_{i-1},tag_i)}{Count(tag_{i-1})}$
-
-$P_{likelihood}(token_i|tag_i) = \frac{Count(tag_{i},token_i)}{Count(tag_{i})}$
+![](https://i.imgur.com/O5I0czj.png)
 
 
 Because the model is purely statistical, the training process is just computation of probability values which is done in linear time. 
@@ -33,7 +31,9 @@ Viterbi algorithm is an instance of dynamic programming approach. https://en.wik
 ## Unknown Tokens
 
 There might be the case that some of the tokens has not been seen during the learning process. Which is equivalent to:
-$$\forall s \in states :: P_{likelihood}(token|state)=0$$
+
+![](https://i.imgur.com/TsCj9Iu.png)
+
 
 One of the solutions is to completely ignore this factor while calculating  Following this approach I end up predicting the most probable next tag regardless of the token. 
 
